@@ -1,16 +1,16 @@
 class Song:
-    count = 0
+    song_count = 0
     genre_count = {}
     artist_count = {}
     genres = []
-    artists = []
+    artists =[]
 
     def __init__(self, name, artist, genre):
         self.name = name
         self.artist = artist
         self.genre = genre
 
-        Song.count += 1
+        Song.song_count += 1
 
         Song.genre_count[genre] = Song.genre_count.get(genre, 0) + 1
 
@@ -18,7 +18,7 @@ class Song:
 
     @classmethod
     def count(cls):
-        return cls.count
+        return cls.song_count
 
     @classmethod
     def genres(cls):
@@ -29,8 +29,8 @@ class Song:
         return list(cls.artist_count.keys())
     
     @classmethod
-    def add_song_to_count(cls):
-        cls.count += 1
+    def add_song_to_count(cls, song):
+        cls.song_count += 1
     
     @classmethod
     def add_to_genres(cls, genre):
