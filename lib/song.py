@@ -37,8 +37,8 @@ class Song:
     def add_to_artist_count(cls, artist):
         cls.artist_count[artist] = cls.artist_count.get(artist, 0) + 1
 
-s1 = Song("Halo", "Beyonce", "Pop")
-s2 = Song("Crazy in Love", "Beyonce", "R&B")
+# s1 = Song("Halo", "Beyonce", "Pop")
+# s2 = Song("Crazy in Love", "Beyonce", "R&B")
 
 # print(Song.count())  # Output: 2
 # print(Song.genres())  # Output: ['Pop', 'R&B']
