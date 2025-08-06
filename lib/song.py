@@ -17,21 +17,17 @@ class Song:
 
         self.song_count += 1
 
-        Song.genre_count[genre] = Song.genre_count.get(genre, 0) + 1
-
-        Song.artist_count[artist] = Song.artist_count.get(artist, 0) + 1
-
     @classmethod
     def count(cls):
-        return cls.song_count
+        cls.song_count
 
     @classmethod
     def genres(cls):
-        return list(cls.genre_count.keys())
+        list(cls.genre_count.keys())
 
     @classmethod
     def artists(cls):
-        return list(cls.artist_count.keys())
+        list(cls.artist_count.keys())
     
     @classmethod
     def add_song_to_count(cls):
