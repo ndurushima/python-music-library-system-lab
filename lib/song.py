@@ -31,22 +31,16 @@ class Song:
     
     @classmethod
     def add_to_genre_count(cls, genre):
-        if cls.genre_count[genre]:
-            cls.genre_count.get(genre, 0) + 1
-        else:
-            cls.genre_count[genre] = 1
+        cls.genre_count[genre] = cls.genre_count.get(genre, 0) + 1
 
     @classmethod
     def add_to_artist_count(cls, artist):
-        if cls.artist_count[artist]: 
-            cls.artist_count.get(artist, 0) + 1
-        else:
-            cls.artist_count[artist] = 1
+        cls.artist_count[artist] = cls.artist_count.get(artist, 0) + 1
 
-# s1 = Song("Halo", "Beyonce", "Pop")
-# s2 = Song("Crazy in Love", "Beyonce", "R&B")
+s1 = Song("Halo", "Beyonce", "Pop")
+s2 = Song("Crazy in Love", "Beyonce", "R&B")
 
-# print(Song.count())  # Output: 2
-# print(Song.genres())  # Output: ['Pop', 'R&B']
-# print(Song.artists())  # Output: ['Beyonce']
-# print(Song.genre_count)  # Output: {'Pop': 1, 'R&B': 1}
+print(Song.count())  # Output: 2
+print(Song.genres())  # Output: ['Pop', 'R&B']
+print(Song.artists())  # Output: ['Beyonce']
+print(Song.genre_count)  # Output: {'Pop': 1, 'R&B': 1}
