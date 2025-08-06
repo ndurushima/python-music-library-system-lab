@@ -1,5 +1,5 @@
 class Song:
-    song_count = 0
+    count = 0
     genre_count = {}
     artist_count = {}
     genres = []
@@ -14,20 +14,6 @@ class Song:
         self.add_to_artists(artist)
         self.add_to_genre_count(genre)
         self.add_to_artist_count(artist)
-
-        self.song_count += 1
-
-    @classmethod
-    def count(cls):
-        cls.song_count
-
-    @classmethod
-    def genres(cls):
-        list(cls.genre_count.keys())
-
-    @classmethod
-    def artists(cls):
-        list(cls.artist_count.keys())
     
     @classmethod
     def add_song_to_count(cls):
