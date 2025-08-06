@@ -10,7 +10,7 @@ class Song:
         self.artist = artist
         self.genre = genre
 
-        Song.count += 1
+        Song.song_count += 1
 
         Song.genre_count[genre] = Song.genre_count.get(genre, 0) + 1
 
@@ -29,7 +29,7 @@ class Song:
         return list(cls.artist_count.keys())
     
     @classmethod
-    def add_song_to_count(cls):
+    def add_song_to_count(cls, song):
         cls.song_count += 1
     
     @classmethod
